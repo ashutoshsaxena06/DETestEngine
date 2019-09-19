@@ -12,12 +12,12 @@ import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(plugin = { "pretty", "html:target/cucumber",
 		"json:target/cucumber/cucumber.json" }, 
-	features = "src/test/resources/adminApp", 
-	glue = "com.de.stepdefinition", 
+	features = "src/test/resources/", 
+	glue = {"com.de.deApp.stepdefinition", "com.de.adminApp.stepDefinitions"}, 
 	monochrome = true, 
 	dryRun = false, 
 	strict = false, 
-	tags = {"@smoke"})
+	tags = {"@endToEnd"})
 
 public class TestRunner {
 /*

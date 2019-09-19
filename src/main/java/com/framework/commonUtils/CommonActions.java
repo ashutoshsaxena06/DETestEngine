@@ -1,6 +1,5 @@
 package com.framework.commonUtils;
 
-import java.util.HashMap;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -65,14 +64,14 @@ public class CommonActions {
         return driver;
     }
 
-    public WebDriver setDriver(){
+    public static WebDriver setDriver(){
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
             System.setProperty("webdriver.chrome.driver", defaultPath);
             return new ChromeDriver(options);
     }
 
-    public WebDriver getDriver(){
-    return driver !=null ? driver : setDriver();
+    public static WebDriver getDriver(){
+    return driver;
     }
 }

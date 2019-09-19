@@ -58,6 +58,12 @@ public class Locations extends GlobalPage {
 			logger.error("valid values not provided to add location");
 		}
 	}
+
+
+	@Override
+	public WebElement getUniqueElementInPage() {
+		return h_pageTitle;
+	}
 	
 	
 	

@@ -32,7 +32,7 @@ public class DEHomeStepDefinition {
 
 	@When("^I perform healthCheckUp operation of host on \"([^\"]*)\" server of \"([^\"]*)\" enivronment$")
 	public void i_perform_healthCheckUp_operation_of_host_on_server_of_enivronment(String browser, String env) {
-		commonActions.setDriver(browser, env);
+		commonActions.setDriver(browser, Constants.path);
 		commonActions.getDriver().get(Constants.DEApp.getde_App_Url());
 		System.out.println("Performed the browser open action");
 	}
@@ -62,6 +62,7 @@ public class DEHomeStepDefinition {
 
 	@When("^I log in as a \"([^\"]*)\" user$")
 	public void i_log_in_as_a_user(String admin) {
+		commonActions.getDriver().get(Constants.DEApp.getde_App_Url());
 		login = new DELogin(commonActions.getDriver());
 		login.doLogin(Constants.DEApp.getUsername(), Constants.DEApp.getUsername());
 		try {

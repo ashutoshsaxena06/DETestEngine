@@ -4,8 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import com.framework.commonUtils.Roles;
 
-import com.de.adminApp.pages.Roles;
 
 public class Constants {
 
@@ -28,15 +28,18 @@ public class Constants {
 		private String de_App_Url;
 
 		public static String getUsername() {
-			return prop.getProperty("username");
+			return "autoUser111";
+					//prop.getProperty("username");
 		}
 
 		public static String getUserPassword() {
-			return prop.getProperty("userPassword");
+			return AdminApp.defaultPassword;
+					//prop.getProperty("userPassword");
 		}
 
 		public static String getde_App_Url() {
-			return prop.getProperty("de_App_Url");
+			return "http://newdiningedge.baitek.org:8100/";
+					//prop.getProperty("de_App_Url");
 		}
 		public static void setde_App_Url(String url) {
 			prop.setProperty("de_App_Url", url);
