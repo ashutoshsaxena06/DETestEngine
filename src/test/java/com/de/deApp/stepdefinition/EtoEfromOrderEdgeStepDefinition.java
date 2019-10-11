@@ -73,7 +73,7 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@Given("^user is on adminApp home page$")
 	public void user_is_on_adminApp_home_page() {
-		// sleep(7000);
+		sleep(7000);
 		if (adminApploginFlag) {
 			adminHomePage = new AdminHomePage("adminHomePage");
 			Reporter.report.step("Login to admin app starus is [{}]", adminHomePage.loggedInStatus());
@@ -86,7 +86,7 @@ public class EtoEfromOrderEdgeStepDefinition {
 	@When("^Create a new Company \"([^\"]*)\" in adminApp$")
 	public void create_a_new_Company_in_adminApp(String companyName) {
 		this.companyName = companyName;
-		// sleep(7000);
+		sleep(7000);
 		companies = new Companies();
 		companies.getLnk_Add().click();
 		createCompany = new Company.CreateCompany();
@@ -98,13 +98,13 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@When("^Create \"([^\"]*)\" and assign \"([^\"]*)\" in adminApp$")
 	public void create_and_assign_in_adminApp(String userName, String companyName) {
-		// sleep(7000);
+		sleep(7000);
 		adminHomePage.getlnk_sideBarLink(AdminAppSideLinks.Users.name()).click();
 		users = new Users();
 		users.getLnk_Add().click();
 		user = new User();
 		user.shouldExist(user, 10);
-		// sleep(3000);
+		sleep(3000);
 		user.addUser(companyName, null, userName, null);
 		// users.shouldExist(users, 10);
 		// Assert.assertThat(users.getCellFromList("Username", userName).getText(),
@@ -113,10 +113,10 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@When("^Login DE webApp with \"([^\"]*)\"$")
 	public void login_DE_webApp_with(String userName) {
-		// sleep(7000);
+		sleep(7000);
 		deLoginPage = new DELogin();
 		deLoginPage.launchURL();
-		// sleep(3000);
+		sleep(3000);
 		deLoginPage.shouldExist(deLoginPage, 20);
 		deLoginPage.doLogin();
 		deHomePage = new DEHome();
@@ -125,7 +125,7 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@When("^Go to settings page$")
 	public void go_to_settings_page() {
-		// sleep(7000);
+		sleep(7000);
 		deHomePage.getLnk_Settings().click();
 		settingsPage = new SettingsPage();
 		settingsPage.shouldExist(settingsPage, 10);
@@ -133,14 +133,14 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@When("^Add company Logo$")
 	public void add_company_Logo() {
-		// sleep(7000);
+		sleep(7000);
 		settingsPage.addCompanylogo();
 		settingsPage.logoExist();
 	}
 
 	@When("^Create a new location \"([^\"]*)\" with required basic and notification tab details$")
 	public void create_a_new_location_with_required_basic_and_notification_tab_details(String locName) {
-		// sleep(7000);
+		sleep(7000);
 		settingsPage.getBtn_NewLocation().click();
 		createLocationPage = new CreateLocationPage();
 		createLocationPage.shouldExist(createLocationPage, 10);
@@ -148,7 +148,7 @@ public class EtoEfromOrderEdgeStepDefinition {
 		// createLocationPage.goToNextTab();
 		createLocationPage.goToNotificationTab();
 		// createLocationPage.fillNotificationDetails();
-		// sleep(3000);
+		sleep(3000);
 		createLocationPage.saveLocation();
 		dataManager.setLocationName(locName);
 	}
@@ -161,7 +161,7 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@When("^Create a new vendor \"([^\"]*)\"$")
 	public void create_a_new_vendor(String vendorName) {
-		// sleep(5000);
+		sleep(5000);
 		this.vendorName = vendorName;
 		settingsPage.getBtn_NewVendor().click();
 		createVendorPage = new CreateVendorPage();
@@ -177,9 +177,9 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@When("^Edit vendor to add the Order notification E-mail addresses$")
 	public void edit_vendor_to_add_the_Order_notification_E_mail_addresses() {
-		// sleep(5000);
+		sleep(5000);
 		editVendorPage = settingsPage.editVendor(vendorName);
-		// sleep(3000);
+		sleep(3000);
 		editVendorPage.goToNotificationTab();
 		editVendorPage.getTxtOrderNotification().clearAndType(Constants.AdminApp.defaultEmail);
 		editVendorPage.getBtn_SaveEditVendor().click();
@@ -187,13 +187,13 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@When("^Navigate to manage product list$")
 	public void navigate_to_manage_product_list() {
-		// sleep(5000);
+		sleep(5000);
 		manageProductListsTab = settingsPage.navigateToManageProductListsTab();
 	}
 
 	@When("^Create a new product list as \"([^\"]*)\" and assign to \"([^\"]*)\"$")
 	public void create_a_new_product_list_as_and_assign_to(String productList, String locationName) {
-		// sleep(5000);
+		sleep(5000);
 		this.productList = productList;
 		manageProductListsTab.getLnk_NewProductList().click();
 		manageProductListsTab.createNewProductList(productList);
@@ -222,7 +222,7 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@Then("^Verify the count of products imported from product list file$")
 	public void verify_the_count_of_products_imported_from_product_list_file() {
-		// sleep(5000);
+		sleep(5000);
 		productListsPage.shouldExist(productListsPage, 10);
 		String totalCount = productListsPage.getLbl_TotalCount().getText().replace("Total: ", "");
 		Assert.assertThat(totalCount, Matchers.equalToIgnoringCase(expectedCount));
@@ -230,14 +230,14 @@ public class EtoEfromOrderEdgeStepDefinition {
 
 	@When("^Switch to adminApp$")
 	public void switch_to_adminApp() {
-		// sleep(5000);
+		sleep(5000);
 		login_to_admin_app();
 	}
 
 	@When("^Go to order guides in vendors in adminApp$")
 	public void go_to_order_guides_in_vendors_in_adminApp() {
 		adminHomePage.getlnk_sideBarLink("Vendors").click();
-		// sleep(3000);
+		sleep(3000);
 		adminHomePage.getlnk_sideBarLink("Order Guides").click();
 	}
 
