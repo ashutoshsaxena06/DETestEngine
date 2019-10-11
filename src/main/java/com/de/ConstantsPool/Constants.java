@@ -55,6 +55,7 @@ public class Constants {
 		public static final String defaultCompanyName = "New Demo Site";
 		public static final String defaultUserName = "automationUser";
 		public static final String defaultEmail = "teamesave@gmail.com";
+		public static final String defaultEmail1 = "onlineweekend.diningedge@gmail.com";
 		public static final String defaultPassword = "123456";
 		public static final String defaultRoles = Roles.ROLE_OWNER.name();
 		public static final String defaultLocation = "autoLocation";

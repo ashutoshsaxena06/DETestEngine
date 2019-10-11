@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cucumber-JVM Html Reports - Tag: @EndToEndOrdering</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+
+<script type="text/javascript" src="highcharts.js"></script>
+<script type="text/javascript" src="highcharts-3d.js"></script>
+
+<link rel="stylesheet" href="bootstrap.min.css" type="text/css"/>
+
+<link rel="stylesheet" href="reporting.css" type="text/css"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#tablesorter").tablesorter();
+});
+</script>
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-jvm Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation" ><a href="step-overview.html">Steps</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>DiningEdgeTestAutomatedTestsEngine</td>
+                          <td>101</td>
+                        <td>07 Oct 2019, 20:55</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="title">
+  <h2>Tag Report</h2>
+  </div>
+
+
+<div class="container-fluid" id="report-summary">
+  <table class="stats-table">
+    <thead>
+  <tr class="header">
+        <th></th>
+    <th id="stats-header-scenarios" colspan="3">Scenarios</th>
+    <th id="stats-header-steps" colspan="7">Steps</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <th id="stats-header-key">Tag</th>
+        <th id="stats-header-scenarios-total">Total</th>
+    <th id="stats-header-scenarios-passed">Passed</th>
+    <th id="stats-header-scenarios-failed">Failed</th>
+    <th id="stats-header-steps-total">Total</th>
+    <th id="stats-header-steps-passed"    class="passed">Passed</th>
+    <th id="stats-header-steps-failed"    class="failed">Failed</th>
+    <th id="stats-header-steps-skipped"   class="skipped">Skipped</th>
+    <th id="stats-header-steps-pending"   class="pending">Pending</th>
+    <th id="stats-header-steps-undefined" class="undefined">Undefined</th>
+    <th id="stats-header-steps-missing"   class="missing">Missing</th>
+    <th id="stats-header-duration">Duration</th>
+    <th id="stats-header-status">Status</th>
+  </tr>
+</thead>
+    <tr>
+      <td class="tagname"><a href="EndToEndOrdering.html">@EndToEndOrdering</a></td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>28</td>
+      <td>9</td>
+      <td   class="failed"    >1</td>
+      <td    class="skipped"   >18</td>
+      <td >0</td>
+      <td >0</td>
+      <td >0</td>
+      <td class="duration-format">2m 29s 608ms</td>
+      <td class="failed">Failed</td>
+    </tr>
+  </table>
+</div>
+
+<div class="container-fluid" id="report-details">
+      <a href="EtoEfromOrderEdge-feature.html">View Feature File</a>
+    <div class="feature-tags"><a href="EndToEndOrdering.html">@EndToEndOrdering</a></div>
+    
+    <div class="failed"><span class="element-keyword">Scenario Outline: </span><span class="element-name">Ordering for one vendor : Place order from Order edge</span></div>
+          <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">user is on adminApp home page</span><span class="step-duration">07s 107ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="passed"><span class="step-keyword">When  </span><span class="step-name">Create a new Company &quot;testCompany6Oct19&quot; in adminApp</span><span class="step-duration">09s 878ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="passed"><span class="step-keyword">And  </span><span class="step-name">Create &quot;testUser6Oct19&quot; and assign &quot;testCompany6Oct19&quot; in adminApp</span><span class="step-duration">16s 269ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="passed"><span class="step-keyword">And  </span><span class="step-name">Login DE webApp with &quot;testUser6Oct19&quot;</span><span class="step-duration">19s 653ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="passed"><span class="step-keyword">And  </span><span class="step-name">Go to settings page</span><span class="step-duration">07s 315ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="passed"><span class="step-keyword">And  </span><span class="step-name">Create a new location &quot;5Oct&quot; with required basic and notification tab details</span><span class="step-duration">13s 500ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">Verify the created location</span><span class="step-duration">02s 072ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="passed"><span class="step-keyword">When  </span><span class="step-name">Create a new vendor &quot;US Foods&quot;</span><span class="step-duration">06s 570ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">Verify the created vendor &quot;US Foods&quot;</span><span class="step-duration">01s 740ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="failed"><span class="step-keyword">When  </span><span class="step-name">Edit vendor to add the Order notification E-mail addresses</span><span class="step-duration">1m 05s 499ms</span><div class="output_message"><input class="output_collapse" id="output_182191794" type="checkbox"><label for="output_182191794">org.openqa.selenium.NoSuchElementException: txt_OrderNotification is not found on EditVendorPage</label><div>For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'<br/>System info: host: 'sony-PC', ip: '192.168.0.29', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'<br/>Driver info: driver.version: unknown<br/>	at com.de.ui.elements.UIElement.getWrappedElement(UIElement.java:189)<br/>	at com.de.ui.elements.UIElement.clear(UIElement.java:181)<br/>	at com.de.ui.elements.TextBox.clearAndType(TextBox.java:22)<br/>	at com.de.deApp.stepdefinition.EtoEfromOrderEdgeStepDefinition.edit_vendor_to_add_the_Order_notification_E_mail_addresses(EtoEfromOrderEdgeStepDefinition.java:175)<br/>	at ✽.When Edit vendor to add the Order notification E-mail addresses(EtoEfromOrderEdge.feature:20)<br/>Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[contains(.,'Order notification E-mail addresses')]/parent::div/..//input"}<br/>  (Session info: chrome=77.0.3865.90)<br/>  (Driver info: chromedriver=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)<br/>Command duration or timeout: 60.04 seconds<br/>For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br/>Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'<br/>System info: host: 'sony-PC', ip: '192.168.0.29', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'<br/>Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:61083}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\sony\AppData\Local\Temp\scoped_dir6708_1468456177}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=77.0.3865.90, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]<br/>Session ID: 6292c88501e70db966b42c80c356732b<br/>*** Element info: {Using=xpath, value=//span[contains(.,'Order notification E-mail addresses')]/parent::div/..//input}<br/>	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br/>	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br/>	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br/>	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br/>	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)<br/>	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)<br/>	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)<br/>	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br/>	at com.de.ui.elements.UIElement.getWrappedElement(UIElement.java:187)<br/>	at com.de.ui.elements.UIElement.clear(UIElement.java:181)<br/>	at com.de.ui.elements.TextBox.clearAndType(TextBox.java:22)<br/>	at com.de.deApp.stepdefinition.EtoEfromOrderEdgeStepDefinition.edit_vendor_to_add_the_Order_notification_E_mail_addresses(EtoEfromOrderEdgeStepDefinition.java:175)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br/>	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br/>	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br/>	at java.lang.reflect.Method.invoke(Method.java:498)<br/>	at cucumber.runtime.Utils$1.call(Utils.java:37)<br/>	at cucumber.runtime.Timeout.timeout(Timeout.java:13)<br/>	at cucumber.runtime.Utils.invoke(Utils.java:31)<br/>	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:37)<br/>	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)<br/>	at cucumber.runtime.Runtime.runStep(Runtime.java:298)<br/>	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)<br/>	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)<br/>	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:48)<br/>	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)<br/>	at org.junit.runners.Suite.runChild(Suite.java:128)<br/>	at org.junit.runners.Suite.runChild(Suite.java:27)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)<br/>	at org.junit.runners.Suite.runChild(Suite.java:128)<br/>	at org.junit.runners.Suite.runChild(Suite.java:27)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)<br/>	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)<br/>	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)<br/>	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)<br/>	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)<br/>	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)<br/>	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)<br/>	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)<br/>	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)<br/>	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)<br/>	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)<br/>	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)<br/>	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)<br/>	at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:81)<br/>	at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:69)<br/>	at org.testng.TestRunner$1.run(TestRunner.java:697)<br/>	at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:1004)<br/>	at org.testng.TestRunner.privateRunJUnit(TestRunner.java:728)<br/>	at org.testng.TestRunner.run(TestRunner.java:629)<br/>	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br/>	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br/>	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br/>	at org.testng.SuiteRunner.run(SuiteRunner.java:268)<br/>	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br/>	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br/>	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br/>	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br/>	at org.testng.TestNG.run(TestNG.java:1064)<br/>	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:115)<br/>	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:129)<br/>	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:113)<br/>	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:111)<br/>	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)<br/>	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)<br/>	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)<br/></div></div></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">Navigate to manage product list</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">Create a new product list as &quot;productList1&quot; and assign to &quot;5Oct&quot;</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">Then  </span><span class="step-name">Verify the created productList</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">When  </span><span class="step-name">Navigate to product list in manage items</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">Import a valid product list file</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">Then  </span><span class="step-name">Verify the count of products imported from product list file</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">When  </span><span class="step-name">Switch to adminApp</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">Go to order guides in vendors in adminApp</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">Create a new order guide with file &quot;USF GP&quot; in adminApp</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">Then  </span><span class="step-name">Verify the created order guide in adminApp</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">When  </span><span class="step-name">Switch to DE webApp</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">Then  </span><span class="step-name">Verify the created order guide in DE webApp</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">When  </span><span class="step-name">Add comparable for a product</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">Select quantity &quot;10&quot; to order</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">And  </span><span class="step-name">Go to cart using cart icon</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">Then  </span><span class="step-name">Verify the product details on checkout page</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">When  </span><span class="step-name">Submit the Order on checkout page</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+          <div class="skipped"><span class="step-keyword">Then  </span><span class="step-name">Verify the Order details on review page</span><span class="step-duration">000ms</span></div>
+      
+            <div></div>
+      <div></div>
+        
+    <br>
+  </div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+      <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+      <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Cucumber-JVM Reports</a>
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

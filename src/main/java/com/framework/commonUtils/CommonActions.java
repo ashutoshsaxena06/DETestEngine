@@ -11,6 +11,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import com.de.core.DriverManager;
+
 public class CommonActions {
     private static WebDriver driver;
     private static String defaultBrowser="";
@@ -33,7 +35,7 @@ public class CommonActions {
 		}
 	}
 
-    public WebDriver setDriver(String browser, String path){
+    public void setDriver(String browser, String path){
         if (browser.equalsIgnoreCase("ie")) {
             System.setProperty("webdriver.ie.driver", path);
             driver = new InternetExplorerDriver();
@@ -61,10 +63,9 @@ public class CommonActions {
             System.setProperty("webdriver.chrome.driver", path);
             driver = new ChromeDriver(options);
         }
-        return driver;
     }
 
-    public static WebDriver setDriver(){
+    public WebDriver setDriver(){
             ChromeOptions options = new ChromeOptions();
             options.addArguments("start-maximized");
             System.setProperty("webdriver.chrome.driver", defaultPath);
@@ -72,6 +73,6 @@ public class CommonActions {
     }
 
     public static WebDriver getDriver(){
-    return driver;
+    return DriverManager.getDriver();
     }
 }

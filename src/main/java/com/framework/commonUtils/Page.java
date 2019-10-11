@@ -9,18 +9,25 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 
-public abstract class Page {
+import com.de.base.page.BasePage;
+import com.de.core.DriverManager;
+import com.de.ui.elements.UIElement;
 
-	public static WebDriver getDriver() {
-		return CommonActions.getDriver();
+public abstract class Page extends BasePage{
+
+	public Page(String pageName) {
+		super(pageName);
 	}
 
-	public abstract WebElement getUniqueElementInPage();
+	public static WebDriver getDriver() {
+		return DriverManager.getDriver();
+	}
+
+	public abstract UIElement getUniqueElementInPage();
 
 	private static String parentHandle;
 	private static String childHandle;

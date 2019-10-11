@@ -2,7 +2,7 @@ Feature: this feature targets the end to end Ordering flow
 
 
   # Background: Check service is up and running on server
-  @smoke @endToEnd
+  @smoke
   Scenario Outline: Application is UP
     Given I have "<host>" server adminApp which is up
     When I perform healthCheckUp operation of host on adminApp "<browser>" server of "<env>" enivronment
@@ -35,7 +35,7 @@ Feature: this feature targets the end to end Ordering flow
       | automationTest1 |
       | automationTest2 | 
       
-     @createLocation @smoke @endToEnd
+     @createLocation @smoke @endToEndOrdering
   Scenario Outline: Create a User
     Given admin is on the AdminApp home page
     And create User for company with "<companyName>"
@@ -52,12 +52,12 @@ Feature: this feature targets the end to end Ordering flow
       | automationCompany2 | testUser2 | autoUser121 | ashutoshsaxena06@gmail.com | Owner |
       
       # test 4 creating New Locations from Admin portal
-     @createLocation @smoke @endToEnd
+     @createLocation @smoke @endToEndOrdering
   Scenario Outline: Create a Location
-    Given admin is on the AdminApp home page
+    Given User is on the AdminApp home page
     And create Location for company with "<companyName>"
-    When admin click on Add Locations
-    And select the "<companyName>" from company search bar on location page
+    When User click on Add Locations
+    And select the "<companyName>" from company search bar
     And enter the "<locationName>" and "<timeZone>" and "<productList>" on Add Locations page
     And click on Save Changes on Add Locations page
     Then Location must be created
@@ -68,46 +68,4 @@ Feature: this feature targets the end to end Ordering flow
       | automationCompany1 | automationLoc1 | New York | Shipwreck Bar and Grille |
       | automationCompany2 | automationLoc2 | Chicago  | Shipwreck Bar and Grille |
       
-       #test 1  check login
-  @Login @smoke @endToEnd
-  Scenario: Login Scenario
-    Given I am in DiningEdge url
-    When I log in as a "Admin" user
-    Then I should be on Home Page
-
-  #test 2  check link count on home page
-  @Home @Links @functional @smoke @endToEnd
-  Scenario: check link count on home page
-    Given I am in DiningEdge homepage
-    When I check click on all links on this page
-    And get count
-    Then I should be able to click on all links
-    And Get total number of links on a page
-
-  #test 4  check side bar options
-  @SideBar @functional @smoke @endToEnd
-  Scenario Outline: check side bar options
-    Given I am in DiningEdge homepage
-    When I go to side bar "<option>" available on homepage
-    And "<action>" on side bar option
-    Then I should be able to click on "<option>"
-    And new page linked to that option should be displayed
-
-    Examples: 
-      | option         | action |
-      | Order Edge     | click  |
-      | Order from OG  | click  |
-      | Pending Orders | click  |
-      | Orders Guides  | click  |
-      | Reports        | click  |
-      | Manage Items   | click  |
-      | Purchases      | click  |
-
-  #test 5  check logout
-  @Login @smoke @endToEnd
-  Scenario: Login Scenario
-    Given I am in DiningEdge url
-    When I click on logout button
-    Then I should be on login page
-    And Close all browsers
       
