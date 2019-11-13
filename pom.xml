@@ -126,11 +126,11 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.ctl.it.qa</groupId>
-			<artifactId>staf</artifactId>
-			<version>1.0.8-SNAPSHOT</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.ctl.it.qa</groupId>-->
+<!--			<artifactId>staf</artifactId>-->
+<!--			<version>1.0.8-SNAPSHOT</version>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
@@ -219,8 +219,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven.compiler.version}</version>
 				<configuration>
-					<source>${compiler.version}</source>
-					<target>${compiler.version}</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
@@ -259,7 +259,7 @@
 							<outputDirectory>${project.build.directory}/site/cucumber-reports-advanced</outputDirectory>
 							<cucumberOutput>${project.build.directory}/cucumber/cucumber.json</cucumberOutput>
 							<skippedFails>true</skippedFails>
-							<enableFlashCharts>false</enableFlashCharts>
+<!--							<enableFlashCharts>false</enableFlashCharts>-->
 							<buildNumber>101</buildNumber>
 						</configuration>
 					</execution>
@@ -278,5 +278,4 @@
 		</plugins>
 	</reporting>
 </project>
-
 

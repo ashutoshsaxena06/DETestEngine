@@ -1,6 +1,7 @@
 package com.de.deApp.pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 
 import com.de.core.DriverManager;
@@ -16,16 +17,18 @@ public class ManageProductListsTab extends SettingsPage {
 	By loc_lnk_LocationsTab = By.xpath("//span[text()='Locations']");
 	String loc_chk_LocationName = "//span[contains(text(),'locationName')]/parent::label/descendant::input";
 	By loc_h_CreateProductList = By.xpath("//h2[contains(.,'Create Product List')]");
-	By loc_lbl_CreatedListName = By.xpath("//div[contains(text(),'Auto:')]");
+	String loc_lbl_CreatedListName = "//div[contains(text(),'list')]";
 	By loc_btn_SaveProductList = By.xpath("//span[contains(text(),'Save')]");
+	By loc_chkAllLocations = By.xpath("//span[contains(text(),'All locations')]/preceding::input[1]");
 
-	
+
+
 	public ManageProductListsTab() {
 		super("ManageProductListsTab");
 	}
 
-	public UIElement getLbl_CreatedListName() {
-		return new UIElement(loc_lbl_CreatedListName, getPageName(), "lbl_CreatedListName");
+	public UIElement getLbl_CreatedListName(String list) {
+		return new UIElement(By.xpath(loc_lbl_CreatedListName.replace("list", list)), getPageName(), "lbl_CreatedListName");
 	}
 
 	public UIElement getLnk_NewProductList() {
@@ -40,9 +43,13 @@ public class ManageProductListsTab extends SettingsPage {
 		return new UIElement(loc_lnk_LocationsTab, getPageName(), "lnk_LocationsTab");
 	}
 
-//	public CheckBox getchk_LocationName() {
-//		return new CheckBox(loc_chk_LocationName, getPageName(), "chk_LocationName");
-//	}
+	public CheckBox getchk_LocationName(String locationName) {
+		return new CheckBox(By.xpath(loc_chk_LocationName.replace("locationName", locationName)), getPageName(), "locationName");
+	}
+
+	public CheckBox getChkAllLocations() {
+		return new CheckBox(loc_chkAllLocations, getPageName(), "loc_chkAllLocations");
+	}
 
 	public UIElement getH_CreateProductList() {
 		return new UIElement(loc_h_CreateProductList, getPageName(), "h_CreateProductList") {
@@ -61,7 +68,11 @@ public class ManageProductListsTab extends SettingsPage {
 
 	public void assignLocation(String locationName) {
 		new Actions(DriverManager.getDriver()).moveToElement(getLnk_LocationsTab()).click().build().perform();
-		new CheckBox(By.xpath(loc_chk_LocationName.replace("locationName", locationName)), getPageName(),"locationName").check();
+		sleep(2000);
+		((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].scrollIntoView(true);", getchk_LocationName(locationName));
+		sleep(3000);
+		//new Actions(DriverManager.getDriver()).moveToElement(getchk_LocationName(locationName)).click();
+		getChkAllLocations().click();
 		new Button(loc_btn_SaveProductList, getPageName(), "loc_btn_SaveProductList").click();
 	}
 

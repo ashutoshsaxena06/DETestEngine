@@ -107,6 +107,7 @@ public class AdminHomePage extends Page {
 		Actions act = new Actions(DriverManager.getDriver());
 		act.moveToElement(getIc_CompanyList()).click().build().perform();
 		getTxt_CompanyName().sendKeys(companyName);
+		sleep(3000);
 		act.sendKeys(Keys.ENTER).build().perform();
 	}
 

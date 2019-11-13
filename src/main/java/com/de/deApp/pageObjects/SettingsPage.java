@@ -157,4 +157,7 @@ public class SettingsPage extends Page {
 		new Button(loc_btn_Save, getPageName(), "btn_Save").click();
 	}
 
+	public void clickOnAddVendor() {
+		new Actions(getDriver()).moveToElement(getBtn_NewVendor()).click().build().perform();
+	}
 }

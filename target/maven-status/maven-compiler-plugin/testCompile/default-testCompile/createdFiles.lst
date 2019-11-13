@@ -1,7 +1,6 @@
 com\de\adminApp\stepDefinitions\UserStepDefinition.class
 com\de\adminApp\stepDefinitions\LocationStepDefinition.class
 com\de\automation\testRunner\TestRunner.class
-com\de\adminApp\stepDefinitions\TestStep.class
 com\de\adminApp\stepDefinitions\LoginStepDefinition.class
 com\de\adminApp\stepDefinitions\CompanyStepDefinition.class
 com\de\deApp\stepdefinition\DEHomeStepDefinition.class

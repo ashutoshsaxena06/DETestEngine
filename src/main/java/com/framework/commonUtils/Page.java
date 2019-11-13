@@ -31,6 +31,12 @@ public abstract class Page extends BasePage{
 
 	private static String parentHandle;
 	private static String childHandle;
+	public static void sleep(long time) {
+		try {
+			Thread.sleep(time);
+		} catch (Exception e) {
+		}
+	}
 
 	public String getParentHandle() {
 		

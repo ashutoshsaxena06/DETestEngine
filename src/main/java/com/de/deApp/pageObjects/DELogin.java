@@ -14,7 +14,7 @@ public class DELogin  extends Page {
 	By loc_tbx_userName= By.xpath("//label[contains(.,'Username')]/following::input[1]");
 	By  loc_tbx_password= By.xpath("//label[contains(.,'Password')]/following::input[1]");
 	By  loc_btn_Login= By.xpath("//span[contains(.,'Login')]");
-	
+
 	public TextBox getTbx_userName() {
 		return new TextBox(loc_tbx_userName, getPageName(), "txt-user-name");
 	}

@@ -8,6 +8,7 @@ com\de\reporting\Extent.class
 com\de\ui\elements\UIElement.class
 com\de\adminApp\pageObjects\Users.class
 com\de\ConstantsPool\Constants$DEApp.class
+com\de\deApp\pageObjects\OrderSummaryPage.class
 com\de\reporting\Utility.class
 com\de\enums\AdminAppSideLinks$Companies.class
 com\de\reporting\reports\MultiReport.class
@@ -16,12 +17,14 @@ com\de\deApp\pageObjects\OrderEdgePage.class
 com\de\core\DriverManager$8.class
 com\de\reporting\listeners\Listener.class
 com\framework\commonUtils\CommonActions.class
+com\de\deApp\pageObjects\CartObject.class
 com\de\ui\elements\UIElements.class
 com\de\ui\elements\UploadFile.class
 com\de\reporting\TestStep.class
 com\de\adminApp\pageObjects\Companies.class
 com\de\core\DriverManager$2.class
 com\de\ui\elements\TextBox.class
+com\de\deApp\pageObjects\ProductsListPage$1.class
 com\de\deApp\pageObjects\EditVendorPage.class
 com\de\core\DriverManager$9.class
 com\framework\commonUtils\Page.class
@@ -30,10 +33,12 @@ com\de\base\page\WebPage$2.class
 com\de\deApp\pageObjects\CreateLocationPage.class
 com\de\listener\decorator\ReportNGReport.class
 com\de\enums\AdminAppSideLinks.class
+com\de\deApp\pageObjects\CheckoutPage.class
 com\de\deApp\pageObjects\SettingsPage.class
 com\de\core\DriverManager$3.class
 com\framework\commonUtils\Roles.class
 com\de\ui\elements\Button.class
+com\de\deApp\pageObjects\ProductsListPage.class
 com\de\listener\decorator\Report.class
 com\de\reporting\Reporter.class
 com\de\reporting\reports\Report.class
@@ -44,6 +49,7 @@ com\de\deApp\pageObjects\ManageLocations.class
 com\de\adminApp\pageObjects\AdminAppLogin.class
 com\de\reporting\Icon.class
 com\de\base\page\WebPage$1.class
+com\de\deApp\pageObjects\ManageProductListsTab$1.class
 com\de\core\DriverManager$7.class
 com\de\listener\decorator\AllureReport.class
 com\de\ui\elements\PopUpV2.class
@@ -59,9 +65,9 @@ com\de\core\DriverManager.class
 com\de\reporting\Owners.class
 com\de\listener\decorator\ExtentReport.class
 com\de\core\DriverManager$5.class
+com\de\deApp\pageObjects\ManageComparables.class
 com\de\deApp\pageObjects\OrderGuides.class
 com\de\ui\elements\Table.class
-com\de\deApp\pageObjects\ManageProductLists.class
 com\de\adminApp\pageObjects\AdminHomePage.class
 com\de\adminApp\pageObjects\Locations.class
 com\de\reporting\Assertion.class
@@ -82,10 +88,12 @@ com\framework\commonUtils\Page$2.class
 com\de\core\WebDriverThread.class
 com\de\reporting\listeners\CustomizedEmailableReport.class
 com\de\adminApp\pageObjects\Companies$Actions.class
+com\de\deApp\pageObjects\ManageProductListsTab.class
 com\de\core\DriverManager$6.class
 com\de\ui\elements\Alert.class
 com\de\managers\PageObjectManager.class
 com\de\managers\DataManager.class
 com\de\enums\AdminAppSideLinks$Products.class
 com\framework\commonUtils\Page$1.class
+com\de\adminApp\pageObjects\OrderGuidePage.class
 com\de\listener\decorator\MultiReport.class
