@@ -11,6 +11,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -36,6 +37,9 @@
       <recent name="C:\Workspace\DETestEngine\src\test\resources" />
       <recent name="C:\Workspace\DETestEngine\src\main\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\DETestEngine\src\main\resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -49,7 +53,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TestApis.testMethod">
+    <configuration name="TestApis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.de.apiTests.TestApis" />
+      <module name="DETestEngine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.de.apiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestApis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DETestEngine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.de.apiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.de.apiTests" />
+      <option name="MAIN_CLASS_NAME" value="com.de.apiTests.TestApis" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestApis.testMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DETestEngine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.de.apiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.de.apiTests" />
+      <option name="MAIN_CLASS_NAME" value="com.de.apiTests.TestApis" />
+      <option name="METHOD_NAME" value="testMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DETestEngine" />
       <extension name="coverage">
@@ -67,6 +115,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestApis.testMethod" />
+        <item itemvalue="JUnit.TestApis" />
+        <item itemvalue="Application.TestApis" />
         <item itemvalue="JUnit.TestRunner" />
       </list>
     </recent_temporary>
@@ -102,33 +153,23 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/de/deApp/stepdefinition/EtoEfromOrderEdgeStepDefinition.java</url>
-          <line>307</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/de/deApp/stepdefinition/EtoEfromOrderEdgeStepDefinition.java</url>
-          <line>350</line>
+          <line>354</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/de/deApp/stepdefinition/EtoEfromOrderEdgeStepDefinition.java</url>
-          <line>356</line>
+          <line>360</line>
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/de/deApp/stepdefinition/EtoEfromOrderEdgeStepDefinition.java</url>
-          <line>343</line>
+          <line>347</line>
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/de/deApp/stepdefinition/EtoEfromOrderEdgeStepDefinition.java</url>
-          <line>335</line>
+          <line>339</line>
           <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/de/deApp/stepdefinition/EtoEfromOrderEdgeStepDefinition.java</url>
-          <line>323</line>
-          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

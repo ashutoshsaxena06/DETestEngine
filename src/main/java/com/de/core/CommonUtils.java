@@ -76,7 +76,7 @@ public class CommonUtils {
 		}
 	}
 
-	public String convertDtoToString(Object object) {
+	public String  convertDtoToString(Object object) {
 		String dtoStringvalue = null;
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);

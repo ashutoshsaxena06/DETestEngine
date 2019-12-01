@@ -5,7 +5,7 @@ Feature: this feature targets the end to end Ordering flow
    Given login to admin app
 
   # And check if the User and Company exists
-  @EndToEndOrdering @Ordering @OrderEdge
+  @EndToEndOrdering
   Scenario Outline: Ordering for one vendor : Place order from Order edge
     Given user is on adminApp home page
     When Create a new Company "<companyName>" in adminApp
@@ -39,6 +39,5 @@ Feature: this feature targets the end to end Ordering flow
     Then Verify the Order details on review page
 
     Examples: 
-      | companyName         | userName       | locationName | vendorName | productList  | orderGuide | productQuantity |
-      | testCompany6Nov19   | testUser3Oct19 | 2Oct         | US Foods   | productList1 | USF GP     |              10 |
-     # | testCompany7Oct19 | testUser7Oct19 | 7Oct         | Sysco      | productList2 | sysco gp   |              20 |
+      | companyName          | userName         | locationName | vendorName | productList   | orderGuide | productQuantity |
+      | testCompany26Nov19   | testUser26Nov19  | 26Nov        | US Foods   | myProductList | USF GP     |              10 |

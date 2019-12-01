@@ -44,7 +44,7 @@ public class Constants {
         public static final String defaultLasttName = "testing";
         public static final String defaultCompanyName = "New Demo Site";
         public static final String defaultUserName = "automationUser";
-        public static final String defaultEmail = "vb0788@gmail.com";
+        public static final String defaultEmail = "ashutoshsaxena90@mettistech.com";
         public static final String defaultEmail1 = "onlineweekend.diningedge@gmail.com";
         public static final String defaultPassword = "123456";
         public static final String defaultRoles = Roles.ROLE_OWNER.name();

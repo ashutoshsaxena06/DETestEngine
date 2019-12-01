@@ -20,7 +20,9 @@ import com.de.reporting.Reporter;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.interactions.Actions;
 
 public class EtoEfromOrderEdgeStepDefinition {
 
@@ -122,8 +124,8 @@ public class EtoEfromOrderEdgeStepDefinition {
 		DataManager.setCredentials(userName, Constants.AdminApp.defaultPassword);
 		deLoginPage = new DELogin();
 		deLoginPage.launchURL();
-		sleep(5000);
-		deLoginPage.shouldExist(deLoginPage, 40);
+		sleep(10000);
+		deLoginPage.shouldExist(deLoginPage, 90);
 		deLoginPage.doLogin();
 		deHomePage = new DEHome();
 		deHomePage.shouldExist(deHomePage, 120);
@@ -191,7 +193,9 @@ public class EtoEfromOrderEdgeStepDefinition {
 		editVendorPage = settingsPage.editVendor(vendorName);
 		sleep(3000);
 		editVendorPage.goToNotificationTab();
-		editVendorPage.getTxtOrderNotification().clearAndType(Constants.AdminApp.defaultEmail);
+		editVendorPage.getTxtOrderNotification().clearAndType(Constants.AdminApp.defaultEmail1);
+		new Actions(DriverManager.getDriver()).sendKeys(Keys.ENTER).perform();
+		sleep(2000);
 		editVendorPage.getBtn_SaveEditVendor().click();
 	}
 
@@ -312,9 +316,9 @@ public class EtoEfromOrderEdgeStepDefinition {
 		orderEdgePage.orderUsingFullSearch(productName);
 		orderEdgePage.goToManageComparable(productName);
 		manageComparablesPage = new ManageComparables(productName);
-		manageComparablesPage.shouldExist(manageComparablesPage,30);
+//		manageComparablesPage.shouldExist(manageComparablesPage,30);
 		manageComparablesPage.searchProductInVendorList(productName, vendorName);
-		manageComparablesPage.addComparable(productName);
+		manageComparablesPage.addComparable();
 		manageComparablesPage.manageUnitsPopUp().isDisplayed();
 		manageComparablesPage.closeManageUnitsPopUp();
 	}
@@ -355,9 +359,10 @@ public class EtoEfromOrderEdgeStepDefinition {
 	public void verify_the_Order_details_on_review_page() {
 		sleep(10000);
 		orderSummaryPage = new OrderSummaryPage();
-		orderSummaryPage.shouldExist(orderEdgePage,50);
+		orderSummaryPage.shouldExist(orderSummaryPage,50);
 		orderSummaryPage.getPONumber();
 		deHomePage.logout();
+		DriverManager.getDriver().quit();
 	}
 
 }

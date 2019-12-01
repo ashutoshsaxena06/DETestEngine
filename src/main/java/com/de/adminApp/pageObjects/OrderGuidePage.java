@@ -23,7 +23,7 @@ public class OrderGuidePage extends AdminHomePage {
 	By loc_ddl_Selectvendor = By.xpath("//select[@id='orderguides_vendor']");
 	By loc_lbl_AllLocations = By.xpath("//div[@id='orderguides_locations']/..//label");
 	By loc_chk_AllLocationsSelect = By.xpath("//div[@id='orderguides_locations']/..//input");
-	String loc_chk_LocationSelect = "//form[@name='orderguides']/..//label[contains(text(),'2Oct')]/input";
+	String loc_chk_LocationSelect = "//form[@name='orderguides']/..//label[contains(text(),'location')]/input";
 	By loc_txt_attachFile = By.xpath("//form[@name='orderguides']/descendant::input[@id='orderguides_digitalDocument']");
 	By loc_lbl_OGSuccess = By.xpath("//div[contains(text(),'Successfully')]");
 

@@ -1,8 +1,10 @@
 package com.de.deApp.pageObjects;
 
+import com.de.core.DriverManager;
 import com.de.ui.elements.UIElement;
 import com.framework.commonUtils.Page;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 
 public class CheckoutPage extends Page {
     public CheckoutPage() {
@@ -21,7 +23,7 @@ public class CheckoutPage extends Page {
 
     // @Override
     public UIElement getUniqueElementInPage() {
-        return null;
+        return new UIElement(By.xpath("//h2[contains(text(),'Checkout')]"), getPageName(), "heading-checkout");
     }
 
     public void verifyItemDetails() {
@@ -33,7 +35,9 @@ public class CheckoutPage extends Page {
     }
 
     public void submitAll() {
-        new UIElement(loc_btnSubmitAll, getPageName(), "loc_btnSubmitAll").click();
+        UIElement ele = new UIElement(loc_btnSubmitAll, getPageName(), "loc_btnSubmitAll");
+        ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].scrollIntoView(true);", ele);
+        ele.click();
     }
 
 

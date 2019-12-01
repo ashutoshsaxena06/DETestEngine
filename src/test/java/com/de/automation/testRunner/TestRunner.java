@@ -10,7 +10,7 @@ import cucumber.api.junit.Cucumber;
 
 @CucumberOptions(plugin = { "pretty", "html:target/cucumber",
 		"json:target/cucumber/cucumber.json" }, 
-	features = "src/test/resources/", 
+	features = "src/test/resources/EtoEfromOrderEdge.feature",
 	glue = {"com.de.deApp.stepdefinition", "com.de.adminApp.stepDefinitions"}, 
 	monochrome = true, 
 	dryRun = false, 

@@ -7,10 +7,8 @@ import com.de.ui.elements.TextBox;
 import com.de.ui.elements.UIElement;
 import com.framework.commonUtils.Page;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-
-import java.sql.Driver;
 
 public class OrderEdgePage extends Page {
 
@@ -26,6 +24,8 @@ public class OrderEdgePage extends Page {
     By loc_txt_Search = By.xpath("//input[@id='adornment-search']");
     By loc_lnkOpenManageComparable = By.xpath("//div[@id='fixed-col']/descendant::a[@title='Open Manage Comparabls']");
     By loc_hOrderEdgeTitle = By.xpath("//h3[contains(text(),'Order Edge')]");
+    By loc_btnQTY= By.xpath("//div[@title='Put to cart']/descendant::div[@role='button']");
+    String loc_itemQTY =  "//ul[@role='listbox']/li[contains(text(),'qty')]";
 
     public UIElement getHOrderEdgeTitle() {
         return new TextBox(loc_hOrderEdgeTitle, getPageName(), "loc_hOrderEdgeTitle");
@@ -59,6 +59,10 @@ public class OrderEdgePage extends Page {
         return new Button(loc_btn_Checkout, getPageName(), "loc_btn_Checkout");
     }
 
+    public UIElement getBtnQTY() {
+        return new TextBox(loc_btnQTY, getPageName(), "loc_btnQTY");
+    }
+
 //total items on a page //div[@id='grid']/*
 	// product window
 	//button[@title='Hide product from Grid']
@@ -71,7 +75,7 @@ public class OrderEdgePage extends Page {
     String loc_ManageCompForProduct= "//div[@id='grid']/descendant::h3[contains(text(),'productName')]/preceding::a[@title='Open Manage Comparabls']";
     String loc_VendorNames= "//div[@id='grid-header']/descendant::p"; // vendor header names
     String loc_VendorCellForProduct ="//div[@id='grid']/descendant::h3[contains(text(),'productName')]/ancestor::div[4]/following-sibling::div";
-    String loc_txtItemQty = "//div[@id='grid']/descendant::h3[contains(text(),'productName')]/ancestor::div[contains(@class,'grid-row-fixes')]/following-sibling::div/div[2]/descendant::input[1]";
+    String loc_txtItemQty = "//div[@id='grid']/descendant::h3[contains(text(),'Beef Base')]/ancestor::div[4]/following-sibling::div/descendant::input[1]";
 
     public String getLoc_ProductNameUsingSeq() {
         return loc_ProductNameUsingSeq;
@@ -83,6 +87,10 @@ public class OrderEdgePage extends Page {
 
     public UIElement getLoc_ProductCellUsingName(String productName) {
         return new UIElement(By.xpath(loc_ProductCellUsingName.replace("productName",productName)), getPageName(), "loc_ProductCellUsingName");
+    }
+
+    public UIElement getItemQTY(String qty) {
+        return new UIElement(By.xpath(loc_itemQTY.replace("qty",qty)), getPageName(), "loc_itemQTY");
     }
 
     public String getLoc_ManageCompForProduct() {
@@ -97,8 +105,8 @@ public class OrderEdgePage extends Page {
         return loc_VendorCellForProduct;
     }
 
-    public String getLoc_ItemQty() {
-        return loc_txtItemQty;
+    public UIElement getLoc_ItemQty(String productName) {
+        return new UIElement(By.xpath(loc_txtItemQty.replace("productName",productName)), getPageName(), "loc_txtItemQty");
     }
 
     public void orderUsingPartialSearch(String partialItemName) {
@@ -130,13 +138,14 @@ public class OrderEdgePage extends Page {
 
     public void goToManageComparable(String productName) {
         // go to resulted product and click on manage comparable + icon
-        try{getLoc_ProductCellUsingName(productName).findElement(loc_lnkOpenManageComparable).click();
+        try{
+              getLnkOpenManageComparable().click();
+//            getLoc_ProductCellUsingName(productName).findElement(loc_lnkOpenManageComparable).click();
 //            new Actions(DriverManager.getDriver()).moveToElement(getLoc_ProductCellUsingName(productName)).perform();
 //            new Actions(DriverManager.getDriver()).moveToElement(ele).click(ele).build().perform();
         }
         catch(Exception e){
             System.out.println(e.getMessage());
-            getLnkOpenManageComparable().click();
         }
     }
 
@@ -144,13 +153,14 @@ public class OrderEdgePage extends Page {
         UIElement productCell = getVendorProductCell(productName);
         // go to vendor on Order edge
         new Actions(DriverManager.getDriver())
-                .clickAndHold(productCell)
+                .click(productCell)
                 .perform();
-        // choose qty
-        WebElement txtQty = productCell.findElement(By.xpath(loc_txtItemQty.replace("productName",productName)));
-        new Actions(DriverManager.getDriver()).moveToElement(txtQty).sendKeys(qty).build().perform();
-        sleep(4000);
-        String actual = txtQty.getAttribute("value");
+        getLoc_ItemQty(productName).sendKeys(qty);
+        new Actions(DriverManager.getDriver()).sendKeys(Keys.TAB).perform();
+//        getBtnQTY().click();
+//        getItemQTY(qty).click();
+        sleep(7000);
+        String actual = getLoc_ItemQty(productName).getAttribute("value");
         System.out.println("Check entered quantity match - " + qty.equalsIgnoreCase(actual) );
     }
 
