@@ -1,13 +1,12 @@
-package com.de.adminApp.stepDefinitions;
+package com.de.framework.adminApp.stepDefinitions;
 
+import com.de.framework.adminApp.pageObjects.AdminHomePage;
+import com.de.framework.adminApp.pageObjects.Companies;
+import com.de.framework.adminApp.pageObjects.User;
+import com.de.framework.adminApp.pageObjects.Users;
 import org.apache.log4j.Logger;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
-
-import com.de.adminApp.pageObjects.AdminHomePage;
-import com.de.adminApp.pageObjects.Companies;
-import com.de.adminApp.pageObjects.User;
-import com.de.adminApp.pageObjects.Users;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

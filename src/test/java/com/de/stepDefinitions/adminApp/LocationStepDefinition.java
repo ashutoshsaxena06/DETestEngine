@@ -1,4 +1,4 @@
-package com.de.adminApp.stepDefinitions;
+package com.de.framework.adminApp.stepDefinitions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;

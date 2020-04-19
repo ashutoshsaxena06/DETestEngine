@@ -1,17 +1,17 @@
-package com.de.adminApp.stepDefinitions;
+package com.de.framework.adminApp.stepDefinitions;
 
 import java.util.List;
 
+import com.de.framework.ConstantsPool.Constants;
+import com.de.framework.adminApp.pageObjects.AdminAppLogin;
+import com.de.framework.adminApp.pageObjects.AdminHomePage;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-import com.de.ConstantsPool.Constants;
-import com.de.adminApp.pageObjects.AdminAppLogin;
-import com.de.adminApp.pageObjects.AdminHomePage;
-import com.de.core.DriverManager;
-import com.framework.commonUtils.CommonActions;
+import com.de.framework.core.DriverManager;
+import com.de.framework.commonUtils.CommonActions;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -20,7 +20,7 @@ import cucumber.api.java.en.When;
 public class LoginStepDefinition {
 	
 	private static final Logger logger = Logger.getLogger(LoginStepDefinition.class);
-	private static AdminAppLogin  adminAppLogin;
+	private static AdminAppLogin adminAppLogin;
 	boolean loginStatus=false;
 	List<WebElement> links;
 	AdminHomePage adminHomePage;

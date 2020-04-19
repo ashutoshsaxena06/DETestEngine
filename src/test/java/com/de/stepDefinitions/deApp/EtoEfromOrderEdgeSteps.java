@@ -1,25 +1,17 @@
-package com.de.deApp.stepdefinition;
-
-import com.de.core.DriverManager;
-import com.de.deApp.pageObjects.*;
-import org.hamcrest.Matchers;
-import org.junit.Assert;
+package com.de.stepDefinitions.deApp;
 
 import com.de.ConstantsPool.Constants;
-import com.de.adminApp.pageObjects.AdminAppLogin;
-import com.de.adminApp.pageObjects.AdminHomePage;
-import com.de.adminApp.pageObjects.Companies;
-import com.de.adminApp.pageObjects.Company;
-import com.de.adminApp.pageObjects.OrderGuidePage;
-import com.de.adminApp.pageObjects.User;
-import com.de.adminApp.pageObjects.Users;
+import com.de.adminApp.pageObjects.*;
+import com.de.core.DriverManager;
+import com.de.deApp.pageObjects.*;
 import com.de.enums.AdminAppSideLinks;
 import com.de.managers.DataManager;
 import com.de.reporting.Reporter;
-
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.hamcrest.Matchers;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.interactions.Actions;

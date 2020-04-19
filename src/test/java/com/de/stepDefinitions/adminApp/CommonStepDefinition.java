@@ -1,8 +1,7 @@
-package com.de.adminApp.stepDefinitions;
+package com.de.framework.adminApp.stepDefinitions;
 
+import com.de.framework.adminApp.pageObjects.AdminAppLogin;
 import org.apache.log4j.Logger;
-
-import com.de.adminApp.pageObjects.AdminAppLogin;
 
 import cucumber.api.java.en.Given;
 

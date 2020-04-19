@@ -1,8 +1,7 @@
-@EndToEndOrdering
 Feature: this feature targets the end to end Ordering flow
 
   Background:
-   Given login to admin app
+    Given login to admin app
 
   # And check if the User and Company exists
   @EndToEndOrdering
@@ -26,7 +25,7 @@ Feature: this feature targets the end to end Ordering flow
     Then Verify the count of products imported from product list file
     When Switch to adminApp
     And Go to order guides in vendors in adminApp
-    And Create a new order guide with file "<orderGuide>" in adminApp
+    And Create a new order guide with file "<orderGuide>" for "<vendorName>" in adminApp
     Then Verify the created order guide in adminApp
     When Switch to DE webApp
     And Go to Order Guides
@@ -38,6 +37,6 @@ Feature: this feature targets the end to end Ordering flow
     When Submit the Order on checkout page
     Then Verify the Order details on review page
 
-    Examples: 
-      | companyName          | userName         | locationName | vendorName | productList   | orderGuide | productQuantity |
-      | testCompany27Nov19   | testUser27Nov19  | 27Nov        | US Foods   | myProductList | USF GP     |              10 |
+    Examples:
+      | companyName | userName        | locationName | vendorName | productList   | orderGuide | productQuantity |
+      | NewCompany  | testUser28Jan20 | 28Jan         | US Foods      | myProductList | USF GP     | 10              |

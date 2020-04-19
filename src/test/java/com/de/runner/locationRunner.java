@@ -1,23 +1,22 @@
-package com.de.automation.testRunner;
+package com.de.runner;
 
-import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-
+import org.junit.runner.RunWith;
 
 
 @RunWith(Cucumber.class)
 
 @CucumberOptions(plugin = { "pretty", "html:target/cucumber",
-		"json:target/cucumber/cucumber.json" }, 
-	features = "src/test/resources/EtoEfromOrderEdge.feature",
-	glue = {"com.de.deApp.stepdefinition", "com.de.adminApp.stepDefinitions"}, 
+		"json:target/cucumber/vendors.json" },
+	features = {"src/test/resources/"},
+	glue = {"com.de.stepDefinitions"},
 	monochrome = true, 
 	dryRun = false, 
 	strict = false, 
-	tags = "@EndToEndOrdering")
+	tags = "@manageVendors")
 
-public class TestRunner {
+public class locationRunner {
 /*
 	 * public static String mailSmtpHost = "uksmtp.markit.partners"; public static
 	 * String envpath = "env.properties"; public static String mailTo = ""; public

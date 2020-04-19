@@ -1,20 +1,11 @@
-package com.de.deApp.stepdefinition;
+package com.de.stepDefinitions.deApp;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
-
-import com.framework.commonUtils.CommonActions;
-import com.de.ConstantsPool.*;
+import com.de.commonUtils.CommonActions;
 import com.de.deApp.pageObjects.DEHome;
 import com.de.deApp.pageObjects.DELogin;
+import org.openqa.selenium.WebElement;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import java.util.List;
 
 public class DEHomeStepDefinition {
 //	static WebcommonActions.getDriver() commonActions.getDriver();
